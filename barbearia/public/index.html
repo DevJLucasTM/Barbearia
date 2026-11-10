@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar horário | Barbearia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/comum.js" defer></script>
+  <script src="js/agendar.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <a href="/" class="marca" id="marca">✂ <span>Barbearia</span></a>
+      <nav>
+        <a href="/" aria-current="page">Agendar</a>
+        <a href="agendamento.html">Meu agendamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="fluxo">
+      <section class="hero">
+        <h1>Marque seu horário</h1>
+        <p>Escolha o serviço, o profissional e o melhor horário pra você. Leva menos de um minuto.</p>
+      </section>
+
+      <section class="passo" id="passo-servico">
+        <h2><span class="numero">1</span> Serviço</h2>
+        <div class="opcoes" id="servicos"></div>
+      </section>
+
+      <section class="passo" id="passo-barbeiro" hidden>
+        <h2><span class="numero">2</span> Profissional</h2>
+        <div class="opcoes" id="barbeiros"></div>
+      </section>
+
+      <section class="passo" id="passo-dia" hidden>
+        <h2><span class="numero">3</span> Dia</h2>
+        <div class="dias" id="dias"></div>
+      </section>
+
+      <section class="passo" id="passo-horario" hidden>
+        <h2><span class="numero">4</span> Horário</h2>
+        <div id="horarios"></div>
+      </section>
+
+      <section class="passo" id="passo-dados" hidden>
+        <h2><span class="numero">5</span> Seus dados</h2>
+        <form class="form" id="form-dados" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" autocomplete="name" maxlength="80" required>
+          </div>
+          <div class="campo">
+            <label for="telefone">WhatsApp</label>
+            <input id="telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel"
+                   placeholder="(88) 99999-0000" required>
+          </div>
+          <div class="resumo" id="resumo"></div>
+          <p class="erro" id="erro-reserva" role="alert"></p>
+          <button class="botao" type="submit" id="confirmar">Confirmar agendamento</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="cartao sucesso" id="sucesso" hidden>
+      <h2>Agendado! ✂</h2>
+      <p id="sucesso-texto"></p>
+      <p>Guarda esse código. Você vai precisar dele se quiser consultar ou cancelar:</p>
+      <div class="codigo" id="sucesso-codigo"></div>
+      <div class="acoes">
+        <a class="botao secundario" id="sucesso-link" href="agendamento.html">Ver meu agendamento</a>
+        <a class="botao" href="/">Marcar outro</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape container">
+    <a href="admin.html">Área do barbeiro</a>
+  </footer>
+</body>
+</html>

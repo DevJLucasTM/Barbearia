@@ -1,0 +1,25 @@
+{
+  "name": "barbearia-agendamento",
+  "version": "1.0.0",
+  "description": "Sistema de agendamento online para barbearia: horários livres, reserva, cancelamento e painel do barbeiro.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "agendamento",
+    "barbearia",
+    "express",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^4.22.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
